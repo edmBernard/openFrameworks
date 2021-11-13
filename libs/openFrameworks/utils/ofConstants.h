@@ -130,7 +130,7 @@ enum ofTargetPlatform{
 
 // then the the platform specific includes:
 #ifdef TARGET_WIN32
-	#define GLEW_STATIC
+	// #define GLEW_STATIC
 	#define GLEW_NO_GLU
 	#include "GL/glew.h"
 	#include "GL/wglew.h"
@@ -214,7 +214,7 @@ enum ofTargetPlatform{
 		#include "EGL/egl.h"
 		#include "EGL/eglext.h"
 	#else // desktop linux
-		#include <GL/glew.h> 
+		#include <GL/glew.h>
 	#endif
 
 	// for some reason, this isn't defined at compile time,

@@ -4,3 +4,6 @@
 [submodule "scripts/apothecary"]
 	path = scripts/apothecary
 	url = https://github.com/openframeworks/apothecary
+[submodule "third-party/videoInput"]
+	path = third-party/videoInput
+	url = git@github.com:ofTheo/videoInput.git
