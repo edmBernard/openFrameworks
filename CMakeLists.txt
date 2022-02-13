@@ -103,6 +103,19 @@ set(OPENFRAMEWORK_SRC
   # ${CMAKE_CURRENT_SOURCE_DIR}/libs/openFrameworks/video/ofQuickTimePlayer.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/libs/openFrameworks/video/ofVideoGrabber.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/libs/openFrameworks/video/ofVideoPlayer.cpp
+
+  # Addons
+  # ofxGui
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxBaseGui.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxButton.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxColorPicker.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxGuiGroup.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxInputField.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxLabel.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxPanel.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxSlider.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxSliderGroup.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxToggle.cpp
 )
 
 set(OPENFRAMEWORK_HEADERS
@@ -210,6 +223,21 @@ set(OPENFRAMEWORK_HEADERS
   ${CMAKE_CURRENT_SOURCE_DIR}/libs/openFrameworks/video/ofVideoBaseTypes.h
   ${CMAKE_CURRENT_SOURCE_DIR}/libs/openFrameworks/video/ofVideoGrabber.h
   ${CMAKE_CURRENT_SOURCE_DIR}/libs/openFrameworks/video/ofVideoPlayer.h
+
+  # Addons
+  # ofxGui
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxBaseGui.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxButton.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxColorPicker.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxGui.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxGuiGroup.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxGuiUtils.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxInputField.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxLabel.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxPanel.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxSlider.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxSliderGroup.h
+  ${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src/ofxToggle.h
 )
 
 add_library(openframework STATIC ${OPENFRAMEWORK_SRC})
@@ -231,6 +259,7 @@ target_include_directories(openframework PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/libs/openFrameworks/types>
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/libs/openFrameworks/utils>
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/libs/openFrameworks/video>
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/addons/ofxGui/src>
   $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
 
